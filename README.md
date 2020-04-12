@@ -145,7 +145,7 @@ module: {
 },
 ```
 
-####less
+#### less
 
 ```js
 // npm install style-loader css-loader less less-loader -D
@@ -165,7 +165,7 @@ module: {
 },
 ```
 
-####sass
+#### sass
 
 ```js
 // npm install style-loader css-loader sass-loader node-sass -D
@@ -265,7 +265,7 @@ module.exports = {
 
 
 
-##demo
+## demo
 
 ```js
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -299,65 +299,6 @@ module.exports = {
     new ExtractTextPlugin("css/styles.css"), // 指定分离后的css文件路径 需要配合module下rules下ExtractTextPlugin.extract({})来使用
   ],
     module: {
-    // 加载转换. css less sass 图片jsx react es6
-    rules: [
-      {
-        test: /.\.css$/, //医生的药房，道士的画符，程序员正则，天下三大奇闻。
-        // npm install style-loader css-loader -D
-        // loader: ["style-loader","css-loader"], //加载css然后将css放置到style标签中
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader'
-        })
-      },
-      {
-        // npm i less-loader less -D
-        // 将less转换为css并加载转换后的css到style
-        test: /.\.less$/,
-        // loader: ["style-loader","css-loader","less-loader"],
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: ["css-loader","less-loader"]
-        })
-      },
-      {
-        // npm i sass-loader node-sass -D
-        test: /.\.scss$/,
-        // loader: ["style-loader","css-loader","sass-loader"]
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: ["css-loader","sass-loader"]
-        })
-      },
-      {
-        // npm i url-loader file-loader -D
-        test: /.\.(jpg|jpeg|gif|svg)$/,
-        // loader: ["url-loader"],
-        use: [
-          {
-            loader: "url-loader",
-            query: {
-              limit: "1844560", // 指定图片的大小，当图片字节小于该值时，转换成base64,当图片字节小于该值时，需要安装file-loader
-              outputPath: "img", //指定图片放置的文件夹
-            }
-          }
-        ]
-      },
-      {
-        // npm install babel-loader babel-core babel-preset-react babel-preset-env
-        test: /.\.(js|jsx)/,
-        exclude: /node_modules/, // 排除指定的文件
-        loader: "babel-loader",
-        query: {
-          presets: [
-            "babel-preset-react",
-            "babel-preset-env"
-          ]
-        }
-      }
-    ]
-  },
-  module: {
     // 加载转换. css less sass 图片jsx react es6
     rules: [
       {

@@ -1,0 +1,11 @@
+$bg-blue: gray;
+$w: 800px;
+$h: 300px;
+body {
+  background-color: $bg-blue;
+  #root {
+    width: $w;
+    height: $h;
+    background-color: #f9f9f9;
+  }
+}

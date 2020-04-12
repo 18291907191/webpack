@@ -1,0 +1,1 @@
+console.log('demo4->my.js');

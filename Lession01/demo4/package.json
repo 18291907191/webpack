@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "build": "webpack src/one.js src/two.js --mode development --output build/haha.js"
+  }
+}

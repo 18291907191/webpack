@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= htmlWebpackPlugin.options.title%></title>
+</head>
+<body>
+  <!-- 我是一个模板呀 -->
+  <div id="root"></div>
+  <div>你在或不在，我都在这里，你快活不快，我都这样~</div>
+  <ul>
+    <li></li>
+    <li><%for(let i = 0 ;i < htmlWebpackPlugin.options.arr.length;i++) {%><h3><%=htmlWebpackPlugin.options.arr[i]%></h3>
+    <%}%></li>
+  </ul>
+</body>
+</html>

@@ -55,7 +55,7 @@ webpack --config filename 指定webpack命令依赖的配置文件，默认是we
 webpack src/main.js --output filename 指定输出文件为filename,默认输出文件为dist/main.js
 ```
 
-###基本配置
+### 基本配置
 
 1. 在项目根目录执行npm init -y生成package.json文件
 2. 在scripts对象中添加命令
@@ -104,13 +104,13 @@ module.exports = {
 
 webpack依赖于Node.js。因此引入依赖模块时需要使用node.js的模块导入
 
-####clean-webpack-plugin
+#### clean-webpack-plugin
 
 > 可以实现在打包时，清空原有的内容，该插件每次迭代使用方法差距较大需要关注官方文档
 >
 > 下载：npm i clean-webpack-plugin -D
 
-####html-webpack-plugin
+#### html-webpack-plugin
 
 > 默认会在dist文件下生成一个html文件并引入打包好的js文件，详细功能见demo
 >
@@ -126,7 +126,7 @@ webpack依赖于Node.js。因此引入依赖模块时需要使用node.js的模�
 
 各个模块的加载转换预编译处理器=》css，es6抓换成es5等。
 
-####css
+#### css
 
 ```js
 // npm install style-loader css-loader -D
